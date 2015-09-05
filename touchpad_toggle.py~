@@ -1,0 +1,9 @@
+import subprocess
+import re
+
+# getID = subprocess.check_output("xinput list | grep \"Trackpad\"")
+getID = subprocess.Popen("xinput list | grep 'Trackpad'", shell=True)
+stdout, stderr = getID.communicate()
+class(stdout)
+# res = re.search("\bid.*\b", stdout)
+
